@@ -1,0 +1,18 @@
+sudo: false
+language: java
+cache:
+  directories:
+  - "$HOME/.cache"
+deploy:
+  provider: script
+  script: "mvn clean package deploy -DmuleDeploy"
+  skip_cleanup: true
+  on:
+    tags: false
+
+notifications:
+  email:
+    recipients:
+    - kalidass@integralzone.com
+    on_success: change
+    on_failure: always
