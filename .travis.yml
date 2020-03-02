@@ -8,7 +8,7 @@ deploy:
   script: "mvn clean package deploy -DmuleDeploy"
   skip_cleanup: true
   on:
-    tags: false
+    branch: master
 
 notifications:
   email:
