@@ -15,6 +15,10 @@
 
 		<app.runtime>4.2.2</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
+		<username>kalidass_int6</username>
+		<password>CGc%kdGLHa4I#FHpOWo*Dzf8MerKo56$a5$w!liM</password>
+		<cloudhub.application.name>hello-world-mule4-km</cloudhub.application.name>
+		<environment>Sandbox</environment>
 	</properties>
 
 	<build>
@@ -25,6 +29,21 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+					<cloudHubDeployment>
+				      <uri>https://anypoint.mulesoft.com</uri>
+				      <muleVersion>${app.runtime}</muleVersion>
+				      <username>${username}</username>
+				      <password>${password}</password>
+				      <applicationName>${cloudhub.application.name}</applicationName>
+				      <environment>${environment}</environment>
+				      <workers>1</workers>
+				      <workerType>MICRO</workerType>
+				      <businessGroup>Integralzone</businessGroup>
+				      <objectStoreV2>true</objectStoreV2>
+				      <properties>
+				        <key>kali</key>
+				      </properties>
+				    </cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -141,6 +160,10 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
+        <pluginRepository>
+		    <id>mule-public</id>
+		    <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
+		  </pluginRepository>
     </pluginRepositories>
 
 </project>
