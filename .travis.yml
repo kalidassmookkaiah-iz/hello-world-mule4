@@ -3,9 +3,11 @@ language:
   java
 jdk:
   - openjdk8
+
 cache:
   directories:
-  - "$HOME/.cache"
+   - $HOME/.m2
+
 deploy:
   provider: script
   script: "mvn clean package deploy -DmuleDeploy"
