@@ -1,7 +1,8 @@
 sudo: false
 language: 
   java
-    - oraclejdk8
+jdk:
+  - oraclejdk8
 cache:
   directories:
   - "$HOME/.cache"
