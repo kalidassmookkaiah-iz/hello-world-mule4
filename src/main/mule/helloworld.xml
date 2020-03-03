@@ -17,7 +17,7 @@ http://www.mulesoft.org/schema/mule/servicenow http://www.mulesoft.org/schema/mu
 		<set-payload value="#[%dw 2.0
 output application/json
 ---
-{'response':'hello World! from Kalidass'}]" doc:name="Set Payload" doc:id="d419da09-a65d-4312-926a-3343655784ea" mimeType="application/json"/>
+{'response':'hello World! from Kalidass!'}]" doc:name="Set Payload" doc:id="d419da09-a65d-4312-926a-3343655784ea" mimeType="application/json"/>
 		<!-- <netsuite:search key="" doc:name="Search" doc:id="a1e8b7e0-8e26-458c-af76-6b18b45fabab" />
 		<salesforce:create-job operation="" type="" doc:name="Create job" doc:id="de66a7e5-51cc-48e8-b81f-3a5ae2f92bcc" />
 		<mule-sap-concur-connector:get-users doc:name="Get users" doc:id="1612e641-69dc-4824-87ee-38289c1de165" />
